@@ -1,0 +1,29 @@
+@mixin found-object($horizontal, $vertical, $name) {
+    animation-name: $name;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    opacity: 1 !important;
+    @keyframes #{$name} {
+        0% {
+            transform: rotate(inital), scale(1);
+        }
+        5% {
+            transform: scale(3) rotate(calc(inital + 100px));
+        }
+        10% {
+            transform: scale(1) rotate(calc(inital + 200px));
+        }
+        25% {
+            transform: scale(3) rotate(calc(inital + 400px));
+        }
+        50% {
+            transform: scale(1) rotate(calc(inital + 800px));
+        }
+        100% {
+            transform: rotate(3000deg);
+            left: $horizontal;
+            top: $vertical;
+            display: none;
+        }
+    }
+}

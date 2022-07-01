@@ -6,6 +6,14 @@
       "dom.iterable",
       "esnext"
     ],
+    "baseUrl": "src",
+    "paths": {
+        "utils/*": ["utils/*"],
+        "types/*": ["types/*"],
+        "components/*": ["components/*"],
+        "assets/*": ["assets/*"],
+    },
+    "typeRoots": ["./node_modules/@types", "./src/types"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,

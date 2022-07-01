@@ -1,0 +1,40 @@
+{
+    "backgrounds": [{
+        "image": "/images/backgrounds/cellar.jpg"
+    },
+    {
+        "image":"/images/backgrounds/fireplace.jpg"
+    }],
+    "hiddenObjects": [{
+    "name": "Fire extinguisher",
+    "image": "/images/fire-extinguisher.png"
+},
+{
+    "name": "Toothpaste",
+    "image": "/images/toothpaste.png"
+},
+{
+    "name": "Teddy bear",
+    "image": "/images/teddy-bear.png"
+},
+{
+    "name": "Crown",
+    "image": "/images/crown.png"
+},
+{
+    "name": "Hair brush",
+    "image": "/images/hair-brush.png"
+},
+{
+    "name": "Snake",
+    "image": "/images/snake.png"
+},
+{
+    "name": "Handprint",
+    "image": "/images/handprint.png"
+},
+{
+    "name": "Apple",
+    "image": "/images/apple.png"
+}]
+}

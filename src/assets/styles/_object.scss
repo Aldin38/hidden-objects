@@ -1,0 +1,41 @@
+.object {
+    // background-color: #0000ff;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+
+    &__found {
+
+        &--left {
+            @include found-object(-200%, 0, spin-left)
+        }
+
+        &--right {
+            @include found-object(200%, 0, spin-right)
+        }
+
+        &--top {
+            @include found-object(0, -200%, spin-top)
+        }
+
+        &--top-left {
+            @include found-object(-200%, -200%, spin-top-left)
+        }
+
+        &--top-right {
+            @include found-object(200%, -200%, spin-top-right)
+        }
+
+        &--bottom {
+            @include found-object(0, 200%, spin-bottom)
+        }
+
+        &--bottom-left {
+            @include found-object(-200%, 200%, spin-bottom-left)
+        }
+
+        &--bottom-right {
+            @include found-object(200%, 200%, spin-bottom-right)
+        }
+    }
+}
