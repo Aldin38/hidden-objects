@@ -6,8 +6,8 @@ export enum GAME_SCREEN_SIZE {
 export enum HIDDEN_OBJECT_LIMITS {
     ROTATION = 360,
     SCALE_MIN = 0.8,
-    SCALE_MAX = 1.5,
-    VISIBILITY_MIN = 0.4,
+    SCALE_MAX = 1.2,
+    VISIBILITY_MIN = 0.5,
     VISIBILITY_MAX = 0.8,
 }
 
