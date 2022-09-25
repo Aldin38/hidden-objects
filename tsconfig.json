@@ -12,6 +12,7 @@
         "types/*": ["types/*"],
         "components/*": ["components/*"],
         "assets/*": ["assets/*"],
+        "data/*": ["data/*"],
     },
     "typeRoots": ["./node_modules/@types", "./src/types"],
     "allowJs": true,

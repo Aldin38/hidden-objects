@@ -3,28 +3,18 @@ import { Navigation } from "./navigation";
 import { HiddenObject } from './Object';
 import { Background } from "./Background";
 import { RNG } from "utils/randomiser";
-import HiddenObjectsData from 'hidden-objects.json'
-
-interface HiddenObjects {
-    name: string,
-    image: string,
-}
-
-interface BackgroundProps {
-    image: string
-}
+import { GAME_RULES } from "types/enums";
+import { backgrounds, hiddenObjects } from 'data'
 
 interface GameScreenProps {
 
 }
 
 const getRandomBackground = () => {
-    const backgrounds: BackgroundProps[] = HiddenObjectsData.backgrounds;
     return backgrounds[RNG(backgrounds.length, true)];
 }
 
 export const GameScreen: React.FC<GameScreenProps> = () => {
-    const hiddenObjects: HiddenObjects[] = HiddenObjectsData.hiddenObjects;
 
     const hiddenObjectNames = () => {
         return hiddenObjects.reduce((acc, item) => {
@@ -32,6 +22,24 @@ export const GameScreen: React.FC<GameScreenProps> = () => {
             return acc
         }, [] as string[])
     }
+
+
+
+    // RANDOMISEEEE OBJECTS TOO FIND 
+    // TO DOO FIX THIS BROKEN ASSS SHITTTTTTTT ALDINEEE
+    // const hiddenObjectsToFinds = () => {
+    //     const allObjectNames =  hiddenObjectNames();
+
+    //     return allObjectNames.reduce((acc) => {
+    //         if (acc.length > GAME_RULES.MISSED_ATTEMPTS) {
+    //             const randomPick = allObjectNames[RNG(allObjectNames.length - 1, true)]
+    //             acc.push(randomPick);
+    //            allObjectNames.splice(allObjectNames.indexOf(randomPick), 1);
+    //         }
+    //         return acc
+    //     }, [] as string[]);
+    //  }
+
     return(
         <>
         <div className="game-screen">

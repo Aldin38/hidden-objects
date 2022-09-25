@@ -3,6 +3,11 @@ export enum GAME_SCREEN_SIZE {
     HEIGHT = window.innerHeight - window.innerHeight * .20,
 }
 
+export enum GAME_RULES {
+    MISSED_ATTEMPTS = 3,
+    TOTAL_OBJECTS_TO_FIND = 10,
+}
+
 export enum HIDDEN_OBJECT_LIMITS {
     ROTATION = 360,
     SCALE_MIN = 0.8,
