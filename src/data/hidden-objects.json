@@ -33,6 +33,10 @@
         "image": "/images/snake.png"
     },
     {
+        "name": "money",
+        "image": "/images/money.jpg"
+    },
+    {
         "name": "Handprint",
         "image": "/images/handprint.png"
     },

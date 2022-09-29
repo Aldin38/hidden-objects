@@ -1,12 +1,12 @@
-import React from "react";
+import { FC, useContext } from "react";
+import { ItemsToFindContext } from "contexts";
 
-interface NavigationProps {
-    names: string[],
-}
-export const Navigation: React.FC<NavigationProps> = ({ names }) => {
+export const Navigation: FC = () => {
+    const { unfoundObjects } = useContext(ItemsToFindContext);
+
     return(
         <div className="navigation">
-            {names.map((item: string, idx: number) => <div key={idx}>{item}</div>)}
+            {unfoundObjects.map((item: string, idx: number) => <div key={idx}>{item}</div>)}
         </div>
     )
 };

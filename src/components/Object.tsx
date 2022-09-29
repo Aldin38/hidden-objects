@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { RNG } from "utils/randomiser";
+import { ItemsToFindContext } from "contexts";
 import {
     GAME_SCREEN_SIZE,
     HIDDEN_OBJECT_LIMITS,
@@ -34,10 +35,12 @@ const randomiseDirection = (): string => {
 export const HiddenObject: React.FC<ObjectProps> = (hiddenObject) => {
     const [HOfound, setHOfound] = useState('');
     const [objectStyles] = useState(setObjectStyles(positionHiddenObject()));
+    const { unfoundObjects, removeObject } = useContext(ItemsToFindContext);
 
     const objectFoundHandler = (): void => {
-        if (!HOfound) {
+        if (!HOfound && unfoundObjects.includes(hiddenObject.name)) {
             setHOfound(`object__found--${randomiseDirection()}`);
+            removeObject(unfoundObjects.indexOf(hiddenObject.name))
         }
     }
     return(

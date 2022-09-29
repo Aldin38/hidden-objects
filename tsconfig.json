@@ -13,6 +13,7 @@
         "components/*": ["components/*"],
         "assets/*": ["assets/*"],
         "data/*": ["data/*"],
+        "contexts/*": ["contexts/*"],
     },
     "typeRoots": ["./node_modules/@types", "./src/types"],
     "allowJs": true,
